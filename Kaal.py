@@ -21,8 +21,8 @@ from pyrogram import Client, filters
 from pyrogram.raw.base import Update
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message
-from BabyPlugs.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
-from BabyPlugs.admin_check import *
+from KaalPlugs.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
+from KaalPlugs.admin_check import *
 
 bot = Client(
     "Kaal Music",
@@ -48,7 +48,7 @@ START_TEXT = """
 ᴀℓℓ ᴏғ мү cσммαη∂s cαη вε υsε∂ ωιтн : /
 ┏━━━━━━━━━━━━━━━━┓
 ┣★
-┣★ ∂εvεℓσρεя : [мαηנεεт](tg://user?id=1356469075)
+┣★ ∂εvεℓσρεя : [мαηנεεт](tg://user?id=2068551800)
 ┣★
 ┣★ σωηεя : [ɪᴛ's ᴍᴇ ʙᴀʙʏ​](tg://user?id={})
 ┣★
@@ -65,14 +65,14 @@ START_BUTTONS = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton("✗ cσммαη∂s ", callback_data="cbcmds"),
-            InlineKeyboardButton("✗ ∂εvεℓσρεя ", url="https://t.me/anonymous_was_bot")
+            InlineKeyboardButton("✗ ∂εvεℓσρεя ", url="https://t.me/Murat_30_God")
         ],
         [
-            InlineKeyboardButton("✗ sυρρσят ✗", url="https://t.me/DevilsHeavenMF"),
-            InlineKeyboardButton("✗ υρ∂αтεs ✗", url="https://t.me/DevilsHeavenMF")
+            InlineKeyboardButton("✗ sυρρσят ✗", url="https://t.me/Murat_30_God"),
+            InlineKeyboardButton("✗ υρ∂αтεs ✗", url="https://t.me/Murat_30_God")
         ],
         [
-            InlineKeyboardButton("✗ ∂ερℓσү үσυя σωη мυsιc вσт ✗", url="https://github.com/AnonymousBoy1025/BabyGirlMusic")
+            InlineKeyboardButton("✗ ∂ερℓσү үσυя σωη мυsιc вσт ✗", url="https://github.com/Murat-op/KaalMusicbot")
         ]
     ]
 )
@@ -80,8 +80,8 @@ START_BUTTONS = InlineKeyboardMarkup(
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="✗ sυρρσят ✗", url="https://t.me/DevilsHeavenMF"),
-            InlineKeyboardButton(text="✗ ∂εvεℓσρεя ✗", url="https://t.me/anonymous_was_bot")
+            InlineKeyboardButton(text="✗ sυρρσят ✗", url="https://t.me/Murat_30_God"),
+            InlineKeyboardButton(text="✗ ∂εvεℓσρεя ✗", url="https://t.me/Murat_30_God")
         ]
     ]
 )
