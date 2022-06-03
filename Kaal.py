@@ -452,7 +452,7 @@ async def restart(_, message):
 
 
 
-@Client.on_message(filters.command(["gcast"]))
+@bot.on_message(filters.command(["gcast"]))
 async def broadcast(_, message: Message):
     sent=0
     failed=0
