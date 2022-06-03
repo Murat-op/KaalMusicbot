@@ -228,15 +228,15 @@ async def join_chat(c: Client, m: Message):
                 "https://t.me/+", "https://t.me/joinchat/"
             )
             await client.join_chat(invitelink)
-            return await client.send_message(chat_id, "🙂ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ ʙᴀʙʏ.")
+            return await client.send_message(chat_id, "🙂ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ .")
     except UserAlreadyParticipant:
-        return await client.send_message(chat_id, "🙂ᴀssɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ ʙᴀʙʏ")
+        return await client.send_message(chat_id, "🙂ᴀssɪsᴛᴀɴᴛ ᴀʟʀᴇᴀᴅʏ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ ")
 
 
 @bot.on_message(filters.command("start") & filters.group)
 async def start_group(_, message):
     await message.reply_photo(photo="https://telegra.ph/file/73d274b2b60a80b7b518c.jpg",
-                              caption = f"ʜᴇʏ 😘 {message.from_user.mention},\n ᴍᴇ ɪᴢ ᴅᴇᴅ ʙᴀʙʏ​ 😴",
+                              caption = f"ʜᴇʏ 😘 {message.from_user.mention},\n ᴍᴇ ɪᴢ ᴅᴇᴅ sℓεεριηg 😴",
                               reply_markup = BUTTONS)
 
 
@@ -284,7 +284,7 @@ async def video_play(_, message):
         except:
             ice, playlink = await ded(link)
             if ice == "0":
-                return await m.edit("» ɴᴏᴛ ғᴏᴜɴᴅ, ᴛʀʏ sᴇᴀʀᴄʜɪɴɢ ᴡɪᴛʜ ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ ʙᴀʙʏ !")               
+                return await m.edit("» ɴᴏᴛ ғᴏᴜɴᴅ, ᴛʀʏ sᴇᴀʀᴄʜɪɴɢ ᴡɪᴛʜ ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ sιя !")               
     except Exception as e:
         return await m.edit(str(e))
     
@@ -315,9 +315,9 @@ async def skip(_, message):
     if len(message.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ᴡʜᴀᴛ ᴛᴏ sᴋɪᴘ ʙᴀʙʏ 🥲")
+            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ᴡʜᴀᴛ ᴛᴏ sᴋɪᴘ sιя 🥲")
         elif op == 1:
-            await message.reply_text("» ᴛʀᴀᴄᴋ sᴋɪᴘᴘᴇᴅ ʙʏ {} ʙᴀʙʏ🤔".format( message.from_user.mention ), )
+            await message.reply_text("» ᴛʀᴀᴄᴋ sᴋɪᴘᴘᴇᴅ ʙʏ {} вү кααℓ🤔".format( message.from_user.mention ), )
     else:
         skip = message.text.split(None, 1)[1]
         out = "🗑 <b>Removed the following song(s) from the queue:</b> \n"
@@ -358,7 +358,7 @@ async def playlist(_, message):
                 out = out + "\n" + f"<b>#️⃣ {x}</b> - [{title}]({link}) | `{type}` \n"
             await message.reply_text(out, disable_web_page_preview=True)
     else:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
     
 
 @bot.on_message(filters.command(["end", "stop"]) & filters.group)
@@ -369,9 +369,9 @@ async def end(_, message):
     if chat_id in QUEUE:
         await app.leave_group_call(chat_id)
         clear_queue(chat_id)
-        await message.reply_text("» sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ ʙʏ {} ʙᴀʙʏ🥺".format( message.from_user.mention ), )
+        await message.reply_text("» sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ ʙʏ {} кααℓ🥺".format( message.from_user.mention ), )
     else:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ кααℓ 🥱")
         
 
 @bot.on_message(filters.command("pause") & filters.group)
@@ -382,11 +382,11 @@ async def pause(_, message):
     if chat_id in QUEUE:
         try:
             await app.pause_stream(chat_id)
-            await message.reply_text("» ᴛʀᴀᴄᴋ ᴘᴀᴜsᴇᴅ ʙʏ {} ʙᴀʙʏ😫".format( message.from_user.mention ), )
+            await message.reply_text("» ᴛʀᴀᴄᴋ ᴘᴀᴜsᴇᴅ ʙʏ {} кααℓ😫".format( message.from_user.mention ), )
         except:
-            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
     else:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
         
         
 @bot.on_message(filters.command("resume") & filters.group)
