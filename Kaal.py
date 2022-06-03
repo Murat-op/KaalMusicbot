@@ -25,7 +25,7 @@ from BabyPlugs.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an
 from BabyPlugs.admin_check import *
 
 bot = Client(
-    "Baby Girl",
+    "Kaal Music",
     bot_token = os.environ["BOT_TOKEN"],
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"]
@@ -44,35 +44,35 @@ LIVE_CHATS = []
 START_TEXT = """
 **━━━━━━━━━━━━━━━━━━
 🖤 ʜᴇʏ <b>{}</b>,
-      ɪ ᴀᴍ sᴜᴘᴇʀ ғᴀsᴛ ᴠᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs...
-ᴀʟʟ ᴏꜰ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
+       нεү ι αм sυρεя ғαsт vc вσт ғσя тεℓεgяαм gяσυρ ...
+ᴀℓℓ ᴏғ мү cσммαη∂s cαη вε υsε∂ ωιтн : /
 ┏━━━━━━━━━━━━━━━━┓
 ┣★
-┣★ ᴅᴇᴠᴇʟᴏᴘᴇʀ : [𝝙𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦](tg://user?id=1356469075)
+┣★ ∂εvεℓσρεя : [мαηנεεт](tg://user?id=1356469075)
 ┣★
-┣★ ᴏᴡɴᴇʀ : [ɪᴛ's ᴍᴇ ʙᴀʙʏ​](tg://user?id={})
+┣★ σωηεя : [ɪᴛ's ᴍᴇ ʙᴀʙʏ​](tg://user?id={})
 ┣★
 ┗━━━━━━━━━━━━━━━━┛
 
-💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ ᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](tg://user?id={}) ʙᴀʙʏ...
+💞 ɪғ үσυ нαvε αηү qυεsтιση  тнεη ωαтcн тυтσяιαℓs 😕😕 кααℓ...
 ━━━━━━━━━━━━━━━━━━**
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("✗ ᴡᴀɴɴᴀ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ​ ✗", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            InlineKeyboardButton("✗ α∂∂ мε ιη үσυя gяσυρ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-            InlineKeyboardButton("✗ ʜᴇʟᴘ​ ✗", callback_data="cbcmds"),
-            InlineKeyboardButton("✗ ᴅᴇᴠᴇʟᴏᴘᴇʀ ✗", url="https://t.me/anonymous_was_bot")
+            InlineKeyboardButton("✗ cσммαη∂s ", callback_data="cbcmds"),
+            InlineKeyboardButton("✗ ∂εvεℓσρεя ", url="https://t.me/anonymous_was_bot")
         ],
         [
-            InlineKeyboardButton("✗ sᴜᴘᴘᴏʀᴛ ✗", url="https://t.me/DevilsHeavenMF"),
-            InlineKeyboardButton("✗ ᴜᴘᴅᴀᴛᴇs ✗", url="https://t.me/DevilsHeavenMF")
+            InlineKeyboardButton("✗ sυρρσят ✗", url="https://t.me/DevilsHeavenMF"),
+            InlineKeyboardButton("✗ υρ∂αтεs ✗", url="https://t.me/DevilsHeavenMF")
         ],
         [
-            InlineKeyboardButton("✗ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ​ ✗", url="https://github.com/AnonymousBoy1025/BabyGirlMusic")
+            InlineKeyboardButton("✗ ∂ερℓσү үσυя σωη мυsιc вσт ✗", url="https://github.com/AnonymousBoy1025/BabyGirlMusic")
         ]
     ]
 )
@@ -80,8 +80,8 @@ START_BUTTONS = InlineKeyboardMarkup(
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="✗ sᴜᴘᴘᴏʀᴛ ✗", url="https://t.me/DevilsHeavenMF"),
-            InlineKeyboardButton(text="✗ ᴅᴇᴠᴇʟᴏᴘᴇʀ ✗", url="https://t.me/anonymous_was_bot")
+            InlineKeyboardButton(text="✗ sυρρσят ✗", url="https://t.me/DevilsHeavenMF"),
+            InlineKeyboardButton(text="✗ ∂εvεℓσρεя ✗", url="https://t.me/anonymous_was_bot")
         ]
     ]
 )
@@ -207,7 +207,7 @@ async def cbcmds(_, query: CallbackQuery):
 » /unmute - UnMute The Assistant On Voice Chat
 » /playlist - Show You The Playlist
 » /restart - Restart The Bot
-🥵 __𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘉𝘺 𝝙𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦__ 🥵""")
+🥵 __𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘉𝘺 кααℓмυsιc""")
 
 
 @bot.on_message(filters.command("start") & filters.private)
@@ -235,7 +235,7 @@ async def join_chat(c: Client, m: Message):
 
 @bot.on_message(filters.command("start") & filters.group)
 async def start_group(_, message):
-    await message.reply_photo(photo="https://telegra.ph/file/22ae93512721d5186932e.jpg",
+    await message.reply_photo(photo="https://telegra.ph/file/73d274b2b60a80b7b518c.jpg",
                               caption = f"ʜᴇʏ 😘 {message.from_user.mention},\n ᴍᴇ ɪᴢ ᴅᴇᴅ ʙᴀʙʏ​ 😴",
                               reply_markup = BUTTONS)
 
@@ -397,11 +397,11 @@ async def resume(_, message):
     if chat_id in QUEUE:
         try:
             await app.resume_stream(chat_id)
-            await message.reply_text("» ᴛʀᴀᴄᴋ ʀᴇsᴜᴍᴇᴅ ʙʏ {} ʙᴀʙʏ🤗".format( message.from_user.mention ), )
+            await message.reply_text("» ᴛʀᴀᴄᴋ ʀᴇsᴜᴍᴇᴅ ʙʏ {} кααℓ🤗".format( message.from_user.mention ), )
         except:
-            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
     else:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
         
         
 @bot.on_message(filters.command("mute") & filters.group)
@@ -414,9 +414,9 @@ async def mute(_, message):
             await app.mute_stream(chat_id)
             await message.reply_text("🔇 Stream Muted by {} Baby.".format( message.from_user.mention ), )
         except:
-            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
     else:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
         
         
 @bot.on_message(filters.command("unmute") & filters.group)
@@ -427,11 +427,11 @@ async def unmute(_, message):
     if chat_id in QUEUE:
         try:
             await app.unmute_stream(chat_id)
-            await message.reply_text("🔊 Stream unmuted by {} Baby.".format( message.from_user.mention ), )
+            await message.reply_text("🔊 Stream unmuted by {} kaal.".format( message.from_user.mention ), )
         except:
-            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+            await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
     else:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ʙᴀʙʏ 🥱")
+        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
         
         
 @bot.on_message(filters.command(["restart", "fuck"]))
@@ -440,7 +440,7 @@ async def restart(_, message):
     if user_id != OWNER_ID:
         return
     await message.reply_text("🛠 <i>Restarting Music Player...</i>")
-    os.system(f"kill -9 {os.getpid()} && python3 babygirl.py")
+    os.system(f"kill -9 {os.getpid()} && python3 Kaal.py")
             
 
 app.start()
