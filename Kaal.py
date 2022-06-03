@@ -55,7 +55,7 @@ START_TEXT = """
 ┣★
 ┣★ ∂εvεℓσρεя : [мαηנεεт](tg://user?id=2068551800)
 ┣★
-┣★ σωηεя : [ɪᴛ's ᴍᴇ ʙᴀʙʏ​](tg://user?id={})
+┣★ σωηεя : [ɪᴛ's ᴍᴇ kaal user](tg://user?id={})
 ┣★
 ┗━━━━━━━━━━━━━━━━┛
 
@@ -417,7 +417,7 @@ async def mute(_, message):
     if chat_id in QUEUE:
         try:
             await app.mute_stream(chat_id)
-            await message.reply_text("🔇 Stream Muted by {} Baby.".format( message.from_user.mention ), )
+            await message.reply_text("🔇 Stream Muted by {} kaal.".format( message.from_user.mention ), )
         except:
             await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ вү кααℓ 🥱")
     else:
