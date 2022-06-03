@@ -23,6 +23,11 @@ from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message
 from KaalPlugs.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from KaalPlugs.admin_check import *
+import asyncio
+
+from pyrogram import Client, filters
+from pyrogram.types import Dialog, Chat, Message
+from pyrogram.errors import UserAlreadyParticipant
 
 bot = Client(
     "Kaal Music",
@@ -442,6 +447,34 @@ async def restart(_, message):
     await message.reply_text("🛠 <i>Restarting Music Player...</i>")
     os.system(f"kill -9 {os.getpid()} && python3 Kaal.py")
             
+
+
+
+
+
+@Client.on_message(filters.command(["gcast"]))
+async def broadcast(_, message: Message):
+    sent=0
+    failed=0
+    if message.from_user.id not in OWNER_ID:
+        return
+    else:
+        wtf = await message.reply("`Stɑɤtɩŋʛ Ɓɤøɑɗƈɑst ...`")
+        if not message.reply_to_message:
+            await wtf.edit("**__Ƥɭɘɑsɘ Ʀɘƥɭy Ƭø ɑ Mɘssɑʛɘ Ƭø Stɑɤt Ɓɤøɑɗƈɑst ...__**")
+            return
+        lmao = message.reply_to_message.text
+        async for dialog in Client.iter_dialogs():
+            try:
+                await Client.send_message(dialog.chat.id, lmao)
+                sent = sent+1
+                await wtf.edit(f"♥️ `Broadcasted Successfully` \n\n**🚩 Sent:** `{sent}` Ƈɦɑts \n**🚩 Failed:** {failed} chats")
+                await asyncio.sleep(3)
+            except:
+                failed=failed+1
+        await message.reply_text(f"`gcast succesfully` \n\n**sent to:** `{sent}` chats \n**failed in:** {failed} chats")
+
+
 
 app.start()
 bot.run()
