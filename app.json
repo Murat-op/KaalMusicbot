@@ -7,7 +7,7 @@
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram Session String Get From https://t.me/AnonymousStringBot",
+      "description": "Pyrogram Session String Get From ",
       "required": true
     },
     "BOT_TOKEN": {
