@@ -476,6 +476,6 @@ async def broadcast(_, message: Message):
 
 
 
-app.run()
+
 bot.run()
 idle()
