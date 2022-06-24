@@ -5,3 +5,6 @@ youtube_search
 pytube
 yt_dlp
 youtube_dl
+ffmpeg-python
+heroku3
+requests
